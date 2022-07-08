@@ -1,0 +1,21 @@
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	/* align-items: center; */
+	padding: 2em 1em;
+	width: 100%;
+	background: var(--ltmode-bg);
+}
+
+.nav-title {
+	margin: 0;
+}
+
+.dark-mode {
+	display: flex;
+	align-items: center;
+}
+
+.nav-icon {
+	margin-right: .75em;
+}
