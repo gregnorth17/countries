@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import CountryCard from "./country-card/CountryCard";
+import CountryPage from "./country-page/CountryPage";
 import "./Countries.css";
 
 const Countries = () => {
@@ -30,6 +31,7 @@ const Countries = () => {
 
 	return (
 		<main>
+			<CountryPage />
 			<div className="inputs">
 				<input	className="search-country"
 							 	type="text"

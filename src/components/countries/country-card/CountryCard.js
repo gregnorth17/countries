@@ -1,7 +1,11 @@
 import "./CountryCard.css";
+import CountryPage from "../country-page/CountryPage";
 
 const CountryCard = (props) => {
 	console.log(props);
+	function handleChange(country) {
+		
+	}
 	return props.countries.filter(countryName => {
 		if(props.inputs.country === "") {
 			return countryName;
@@ -24,7 +28,7 @@ const CountryCard = (props) => {
 	})
 	.map((country, index) => {
 		return (
-			<div key={index} className="country">
+			<div onClick={handleChange} key={index} className="country">
 				<img className="country-flag" src={country.flags.png} alt="" />
 				<h3 className="country-name">{country.name.common}</h3>
 				<p className="country-population"><span className="text-bold">Population: </span>{country.population}</p>
