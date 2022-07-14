@@ -19,10 +19,9 @@ function App() {
 			<Navbar />
 			<Routes>
       	<Route exact path="/" element={<Home countries={countries}
-																						 country={country}
 																						 setCountry={setCountry}
 				/>}></Route>
-				<Route path="/country" element={<CountryPage />}></Route>
+				<Route path="/country/:countryName" element={<CountryPage country={country} />}></Route>
 			</Routes>
     </div>
   );

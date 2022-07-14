@@ -49,7 +49,7 @@ const Home = (props) => {
 					<option value="oceania">Oceania</option>
 				</select>
 			</div>
-			<CountryCard countries={props.countries} inputs={inputs} />
+			<CountryCard setCountry={props.setCountry} countries={props.countries} inputs={inputs} />
 		</main>
 	)
 }

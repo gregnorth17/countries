@@ -27,8 +27,9 @@ const CountryCard = (props) => {
 		}
 	})
 	.map((country, index) => {
+		// props.setCountry(country);
 		return (
-			<Link to={`/country`}>
+			<Link to={`/country/${country.name.common}`}>
 				<div key={index} className="country">
 					<img className="country-flag" src={country.flags.png} alt="" />
 					<h3 className="country-name">{country.name.common}</h3>
