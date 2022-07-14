@@ -1,6 +1,6 @@
 import "./CountryPage.css";
 
-const CountryPage = () => {
+const CountryPage = (props) => {
 	return (
 		<div className="country-page">
 			<div className="country-flag">

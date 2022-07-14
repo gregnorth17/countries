@@ -1,20 +1,16 @@
 import { useEffect, useState } from "react";
-import CountryCard from "./country-card/CountryCard";
-import CountryPage from "./country-page/CountryPage";
-import "./Countries.css";
+import CountryCard from "./CountryCard";
+import CountryPage from "./CountryPage";
+import "./Home.css";
 
-const Countries = () => {
-	const [countries, setCountries] = useState([])
+const Home = (props) => {
+	
 	const [inputs, setInputs] = useState({
 		country: "",
 		region: ""
 	});
 
-	useEffect(() => {
-		fetch("https://restcountries.com/v3.1/all")
-			.then(response => response.json())
-			.then(data => setCountries(data))
-	}, [])
+	
 
 	const handleChange = (event) => {
 		console.log(event);
@@ -31,7 +27,7 @@ const Countries = () => {
 
 	return (
 		<main>
-			<CountryPage />
+			
 			<div className="inputs">
 				<input	className="search-country"
 							 	type="text"
@@ -53,9 +49,9 @@ const Countries = () => {
 					<option value="oceania">Oceania</option>
 				</select>
 			</div>
-			<CountryCard countries={countries} inputs={inputs} />
+			<CountryCard countries={props.countries} inputs={inputs} />
 		</main>
 	)
 }
 
-export default Countries;
+export default Home;
