@@ -24,7 +24,19 @@ const CountryPage = (props) => {
 	try {
 		return country.map(country => {
 			console.log(country);
+			const languages = Object.values(country.languages);
+			const languageString = languages.map((language, index) => languages[index + 1] ? `${language},` : ` ${language}`)
 			
+			const currencies = country.currencies;
+
+			// use keys, currenies vary with each country
+			const currencyKeys =  Object.keys(currencies);
+			const currenyString = currencyKeys.map((key, index) => {
+				return currencyKeys[index + 1] ? `${currencies[key].name},` : ` ${currencies[key].name}`;
+			})
+
+
+
 			return (
 				<div className="country-page">
 					<div className="country-flag">
@@ -34,7 +46,7 @@ const CountryPage = (props) => {
 					<Link to={"/"}><button>{"<-Back"}</button></Link>
 						<h2 className="country-name">{country.name.common}</h2>
 						<div>
-							<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{country.name.nativeName.cha.official}</p>
+							<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{country.name.nativeName.official}</p>
 							<p className="country-stats"><span className="country-stats-bold">Population: </span>{country.population}</p>
 							<p className="country-stats"><span className="country-stats-bold">Region: </span>{country.region}</p>
 							<p className="country-stats"><span className="country-stats-bold">Sub Region: </span>{country.subregion}</p>
@@ -42,8 +54,8 @@ const CountryPage = (props) => {
 						</div>
 						<div>
 							<p className="country-stats"><span className="country-stats-bold">Top Level Domain: </span>{country.tld}</p>
-							<p className="country-stats"><span className="country-stats-bold">Currencies: </span>{country.currencies.USD.name} {country.currencies.USD.symbol}</p>
-							<p className="country-stats"><span className="country-stats-bold">Languages: </span>{country.languages.cha}, {country.languages.eng}, {country.languages.spa}</p>
+							<p className="country-stats"><span className="country-stats-bold">Currencies: </span>{currenyString}</p>
+							<p className="country-stats"><span className="country-stats-bold">Languages: </span>{languageString}</p>
 							
 						</div>
 						<div className="country-borders">
