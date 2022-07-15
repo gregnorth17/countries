@@ -24,8 +24,13 @@ const CountryPage = (props) => {
 	try {
 		return country.map(country => {
 			console.log(country);
+
+			const nameKeys = Object.values(country.name.nativeName)
+			console.log(nameKeys)
+			const nativeNameString = nameKeys.map((name, index) => nameKeys[index + 1] ? `${name.common}, ` : ` ${name.common}`)
+
 			const languages = Object.values(country.languages);
-			const languageString = languages.map((language, index) => languages[index + 1] ? `${language},` : ` ${language}`)
+			const languageString = languages.map((language, index) => languages[index + 1] ? `${language}, ` : ` ${language}`)
 			
 			const currencies = country.currencies;
 
@@ -46,7 +51,7 @@ const CountryPage = (props) => {
 					<Link to={"/"}><button>{"<-Back"}</button></Link>
 						<h2 className="country-name">{country.name.common}</h2>
 						<div>
-							<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{country.name.nativeName.official}</p>
+							<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{nativeNameString}</p>
 							<p className="country-stats"><span className="country-stats-bold">Population: </span>{country.population}</p>
 							<p className="country-stats"><span className="country-stats-bold">Region: </span>{country.region}</p>
 							<p className="country-stats"><span className="country-stats-bold">Sub Region: </span>{country.subregion}</p>
