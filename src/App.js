@@ -1,14 +1,16 @@
 import {useEffect, useState} from "react";
-import {Link, Routes, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import './App.css';
 import CountryPage from "./components/CountryPage";
+import useLocalStorage from "use-local-storage";
 
 
 function App() {
-	const [countries, setCountries] = useState([])
-	const [country, setCountry] = useState({})
+	const [countries, setCountries] = useState([]);
+	const [darkMode, setDarkMode] = useState(false);
+
 	useEffect(() => {
 		fetch("https://restcountries.com/v3.1/all")
 			.then(response => response.json())
@@ -19,9 +21,10 @@ function App() {
 			<Navbar />
 			<Routes>
       	<Route exact path="/" element={<Home countries={countries}
-																						 setCountry={setCountry}
+																						//  setCountry={setCountry}
 				/>}></Route>
-				<Route path="/country/:countryName" element={<CountryPage country={country} />}></Route>
+				<Route path="/country/:countryName" element={<CountryPage countries={countries} />}></Route>
+				{/* <Route path="/country/:countryName" element></Route> */}
 			</Routes>
     </div>
   );

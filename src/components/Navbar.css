@@ -4,14 +4,15 @@
 	/* align-items: center; */
 	padding: 2em 1em;
 	width: 100%;
-	background: var(--ltmode-bg);
+	background: var(--element);
+	color: var(--text);
 }
 
 .nav-title {
 	margin: 0;
 }
 
-.dark-mode {
+.dark-mode-btn {
 	display: flex;
 	align-items: center;
 }

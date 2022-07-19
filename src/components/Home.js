@@ -11,7 +11,6 @@ const Home = (props) => {
 	});
 
 	
-
 	const handleChange = (event) => {
 		console.log(event);
 		const {name, value} = event.target;
@@ -26,7 +25,7 @@ const Home = (props) => {
 	console.log(inputs.country, inputs.region);
 
 	return (
-		<main>
+		<main className="home">
 			
 			<div className="inputs">
 				<input	className="search-country"

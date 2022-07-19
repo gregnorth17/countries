@@ -1,40 +1,30 @@
 import {useEffect, useState} from "react";
 import {useParams, Link} from "react-router-dom";
+import Borders from "./Borders";
 import "./CountryPage.css";
 
 const CountryPage = (props) => {
 	// console.log(props)
 	const [country, setCountry] = useState([]);
-	const [borderCountries, setBorderCountries] = useState("");
+	const [borders, setBorders] = useState([]);
 	const {countryName} = useParams();
 
 	useEffect( () => {
 		const fetchCountry = async () => {
-			const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
+			const response = await fetch(`https://restcountries.com/v3.1/alpha?codes=${countryName}`)
 			const data = await response.json();
-			setCountry(data)
+			setCountry(data);
+			setBorders(data[0].borders && data[0].borders);
 		}
 
 		fetchCountry()
 		.catch(console.error)
-	},[])
+	},[countryName])
 
-	useEffect(() => {
-		const fetchBorderCountries = async () => {
-			const response = await fetch(`https://restcountries.com/v3.1/alpha?codes=${borderCountries}`)
-			const data2 = await response.json();
-			console.log(data2)
-		}
-		fetchBorderCountries()
-	}, [])
 
-	console.log(country);
-	// console.log(borderCountries);
 	try {
-
 		return country.map(country => {
-			// console.log(country);
-
+			
 			const nameKeys = Object.values(country.name.nativeName)
 			const nativeNameString = nameKeys.map((name, index) => nameKeys[index + 1] ? `${name.common}, ` : ` ${name.common}`)
 
@@ -47,25 +37,6 @@ const CountryPage = (props) => {
 			const currenyString = currencyKeys.map((key, index) => {
 				return currencyKeys[index + 1] ? `${currencies[key].name},` : ` ${currencies[key].name}`;
 			})
-
-			const borders = country.borders.map((border, index) => {
-				console.log(border)
-				// setBorderCountries(`${border},`);
-		
-
-				// borderParam.slice()
-				
-				
-				
-				 
-				return (
-					<div className="border">
-						{country.borders && <Link to={`/country/${border}`}>{border}</Link>}
-					</div>
-				)
-			})
-
-			// TODO border countries
 
 			return (
 				<div className="country-page">
@@ -92,7 +63,7 @@ const CountryPage = (props) => {
 							<p className="country-stats"><span className="country-stats-bold"></span></p>
 						</div>
 						<div className="borders">
-							{borders}
+							{borders && "Borders: "}{<Borders countries={props.countries} borders={borders} />}
 						</div>		
 					</div>
 				</div>

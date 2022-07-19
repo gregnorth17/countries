@@ -8,7 +8,7 @@ const Navbar = () => {
 			<div>
 				<h1 className="nav-title">Where in the world?</h1>
 			</div>
-			<div className="dark-mode">	
+			<div className="dark-mode-btn">	
 				<FontAwesomeIcon className="nav-icon" icon={faMoon} />
 				<span>Dark Mode</span>
 			</div>

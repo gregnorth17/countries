@@ -1,3 +1,15 @@
 p {
 	margin: 0 0 .2em 0;
 }
+
+a {
+	color: var(--text);
+}
+
+.country {
+	background: var(--element);
+}
+
+.text-bold {
+	font-weight: 600;
+}

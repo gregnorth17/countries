@@ -3,19 +3,26 @@
 }
 
 :root {
-	--dkmode-el: hsl(209, 23%, 22%);
-	--dkmode-bg: hsl(207, 26%, 17%);
-	--ltmode-txt: hsl(200, 15%, 8%);
-	--ltmode-input: hsl(0, 0%, 52%);
-	--ltmode-bg: hsl(0, 0%, 98%);
-	--dkltmode-txt: hsl(0, 0%, 100%);
+	--background: hsl(0, 0%, 98%);
+	--elements: hsl(0, 0%, 100%);
+	--text: hsl(200, 15%, 8%);
+	--input: hsl(0, 0%, 52%);
+
 }
+
+[data-theme='dark'] {
+	--background: hsl(207, 26%, 17%);
+	--elements: hsl(209, 23%, 22%);
+	--text: hsl(0, 0%, 100%);
+}
+
 
 body, html {
 	font-family: 'Nunito Sans', sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	margin: 0;
+	color: var(--text);
 }
 
 img {
@@ -24,4 +31,8 @@ img {
 
 p {
 	color: var(--ltmode-txt);
+}
+
+a {
+	text-decoration: none;
 }

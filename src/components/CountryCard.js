@@ -28,16 +28,17 @@ const CountryCard = (props) => {
 	})
 	.map((country, index) => {
 		// props.setCountry(country);
+		// console.log(country.car.cca3)
 		return (
-			<Link to={`/country/${country.name.common}`}>
 				<div key={index} className="country">
-					<img className="country-flag" src={country.flags.png} alt="" />
-					<h3 className="country-name">{country.name.common}</h3>
-					<p className="country-population"><span className="text-bold">Population: </span>{country.population}</p>
-					<p className="country-region"><span className="text-bold">Region: </span>{country.region}</p>
-					<p className="country-capital"><span className="text-bold">Capital: </span>{country.capital}</p>
+					<Link to={`/country/${country.cca3}`}>
+							<img className="country-flag" src={country.flags.png} alt="" />
+							<h3 className="country-name">{country.name.common}</h3>
+					</Link>
+					<p className="country-data"><span className="text-bold">Population: </span>{country.population}</p>
+					<p className="country-data"><span className="text-bold">Region: </span>{country.region}</p>
+					<p className="country-data"><span className="text-bold">Capital: </span>{country.capital}</p>
 				</div>
-			</Link>
 		)
 	})
 	
