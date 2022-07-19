@@ -7,7 +7,22 @@ a {
 }
 
 .country {
-	background: var(--element);
+	background: var(--elements);
+	max-width: 200px;
+	margin-bottom: 3em;
+}
+
+.country-data,
+.country-name {
+	padding-left: 1em;
+}
+
+.country-data {
+	margin-bottom: .4em;
+}
+
+.padding-bottom {
+	padding-bottom: 1.75em;
 }
 
 .text-bold {

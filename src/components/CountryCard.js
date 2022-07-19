@@ -33,11 +33,11 @@ const CountryCard = (props) => {
 				<div key={index} className="country">
 					<Link to={`/country/${country.cca3}`}>
 							<img className="country-flag" src={country.flags.png} alt="" />
-							<h3 className="country-name">{country.name.common}</h3>
+							<h3 className="country-name ">{country.name.common}</h3>
 					</Link>
 					<p className="country-data"><span className="text-bold">Population: </span>{country.population}</p>
 					<p className="country-data"><span className="text-bold">Region: </span>{country.region}</p>
-					<p className="country-data"><span className="text-bold">Capital: </span>{country.capital}</p>
+					<p className="country-data padding-bottom"><span className="text-bold">Capital: </span>{country.capital}</p>
 				</div>
 		)
 	})
