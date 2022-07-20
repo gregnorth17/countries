@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-// import "./CountryCard.css";
+import "./CountryCard.css";
 import CountryPage from "./CountryPage";
 
 const CountryCard = (props) => {
@@ -30,7 +30,7 @@ const CountryCard = (props) => {
 		// props.setCountry(country);
 		// console.log(country.car.cca3)
 		return (
-				<div key={index} className="country">
+				<div key={index} className="country box-shadow">
 					<Link to={`/country/${country.cca3}`}>
 							<img className="country-flag" src={country.flags.png} alt="" />
 							<h3 className="country-name ">{country.name.common}</h3>

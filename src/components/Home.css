@@ -11,13 +11,6 @@
 	padding: 1em .5em;
 }
 
-.search-region,
-.search-country-input {
-	box-shadow: 7px 6px 5px 0px rgba(219,212,212,0.75);
-	-webkit-box-shadow: 7px 6px 5px 0px rgba(219,212,212,0.75);
-	-moz-box-shadow: 7px 6px 5px 0px rgba(219,212,212,0.75);
-}
-
 .inputs {
 	display: flex;
 	flex-direction: column;

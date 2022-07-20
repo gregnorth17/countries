@@ -6,12 +6,35 @@
 
 
 .btn {
-	padding: 0.3em 1.2em;
+	padding: 0.5em 1.2em;
 	background: var(--elements);
 	border: none;
-	margin: 2em 0;
+	margin: 2em 0 5em 0;
 }
 
 .country-flag {
 	width: 100%;
 }
+
+.country-stats {
+	margin-bottom: .5em;
+}
+
+.country-stats-bold,
+.borders {
+	font-weight: 600;
+}
+
+.margin-bottom {
+	margin-bottom: 2em;
+}
+
+.borders {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.border-countires {
+	width: 100%;
+}
+

@@ -3,7 +3,7 @@ import CountryCard from "./CountryCard";
 import CountryPage from "./CountryPage";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-// import "./Home.css";
+import "./Home.css";
 
 const Home = (props) => {
 	
@@ -30,7 +30,7 @@ const Home = (props) => {
 		<main className="home">
 			
 			<div className="inputs">
-				<div className="search-country-input">
+				<div className="search-country-input box-shadow">
 					<FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
 						<input	className="input"
 										type="text"
@@ -44,7 +44,7 @@ const Home = (props) => {
 					<select onChange={handleChange}
 									value={inputs.region}
 									name="region"
-									className="search-region">
+									className="search-region box-shadow">
 						<option value="">Filter by Region...</option>
 						<option value="africa">Africa</option>
 						<option value="americas">America</option>

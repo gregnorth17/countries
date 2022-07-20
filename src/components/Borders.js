@@ -8,8 +8,8 @@ const Borders = (props) => {
 			return props.borders.map((border, index) => {
 			const country = props.countries.find(country => country.cca3 === border)
 				return (
-					<div key={index} className="border">
-						<Link to={`/country/${border}`}>{country.name.common}</Link>
+					<div key={index}>
+						<Link to={`/country/${border}`}><button className="border box-shadow">{country.name.common}</button></Link>
 					</div>
 				)
 			})
