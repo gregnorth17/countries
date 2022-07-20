@@ -1,10 +1,17 @@
 .country-page {
 	background: var(--background);
+	width: 90%;
+	margin: 0 auto;
 }
+
 
 .btn {
 	padding: 0.3em 1.2em;
 	background: var(--elements);
 	border: none;
 	margin: 2em 0;
+}
+
+.country-flag {
+	width: 100%;
 }

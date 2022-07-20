@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import "./CountryCard.css";
+// import "./CountryCard.css";
 import CountryPage from "./CountryPage";
 
 const CountryCard = (props) => {

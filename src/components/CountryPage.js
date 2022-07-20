@@ -40,9 +40,9 @@ const CountryPage = (props) => {
 			return (
 				<div className="country-page">
 					<Link to={"/"}><button className="btn">←  Back</button></Link>
-					<div className="country-flag"> 
-						<img src={country.flags.png} alt="flag"/>
-					</div>
+					{/* <div className="country-flag">  */}
+						<img className="country-flag" src={country.flags.png} alt="flag"/>
+					{/* </div> */}
 					<div className="country-data">
 						<h2 className="country-name">{country.name.common}</h2>
 						<div>
