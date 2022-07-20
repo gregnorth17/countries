@@ -4,7 +4,6 @@ import Borders from "./Borders";
 import "./CountryPage.css";
 
 const CountryPage = (props) => {
-	// console.log(props)
 	const [country, setCountry] = useState([]);
 	const [borders, setBorders] = useState([]);
 	const {countryName} = useParams();
@@ -40,11 +39,11 @@ const CountryPage = (props) => {
 
 			return (
 				<div className="country-page">
-					<div className="country-flag">
+					<Link to={"/"}><button className="btn">←  Back</button></Link>
+					<div className="country-flag"> 
 						<img src={country.flags.png} alt="flag"/>
 					</div>
 					<div className="country-data">
-					<Link to={"/"}><button>{"<-Back"}</button></Link>
 						<h2 className="country-name">{country.name.common}</h2>
 						<div>
 							<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{nativeNameString}</p>

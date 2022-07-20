@@ -30,9 +30,9 @@ const Home = (props) => {
 		<main className="home">
 			
 			<div className="inputs">
-				<div className="input">
+				<div className="search-country-input">
 					<FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
-						<input	className="search-country"
+						<input	className="input"
 										type="text"
 										value={inputs.country}
 										name="country"
@@ -40,19 +40,21 @@ const Home = (props) => {
 										onChange={handleChange}		
 						/>
 				</div>
-				
-				<select onChange={handleChange}
-								value={inputs.region}
-								name="region"
-				  			className="search-region">
-					<option value="">Filter by Region...</option>
-					<option value="africa">Africa</option>
-					<option value="americas">America</option>
-					<option value="asia">Asia</option>
-					<option value="europe">Europe</option>
-					<option value="oceania">Oceania</option>
-				</select>
+				<div>
+					<select onChange={handleChange}
+									value={inputs.region}
+									name="region"
+									className="search-region">
+						<option value="">Filter by Region...</option>
+						<option value="africa">Africa</option>
+						<option value="americas">America</option>
+						<option value="asia">Asia</option>
+						<option value="europe">Europe</option>
+						<option value="oceania">Oceania</option>
+					</select>
+				</div>
 			</div>
+			
 			<CountryCard setCountry={props.setCountry} countries={props.countries} inputs={inputs} />
 		</main>
 	)
