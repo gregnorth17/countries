@@ -1,7 +1,6 @@
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import "./CountryCard.css";
-import CountryPage from "./CountryPage";
 
 const CountryCard = (props) => {
 	console.log(props);
@@ -27,12 +26,12 @@ const CountryCard = (props) => {
 		}
 	})
 	.map((country, index) => {
-		// props.setCountry(country);
-		// console.log(country.car.cca3)
 		return (
 				<div key={index} className="country box-shadow">
 					<Link to={`/country/${country.cca3}`}>
-							<img className="country-flag" src={country.flags.png} alt="" />
+							<div>
+								<img className="country-flag" src={country.flags.png} alt="" />
+							</div>
 							<h3 className="country-name ">{country.name.common}</h3>
 					</Link>
 					<p className="country-data"><span className="text-bold">Population: </span>{country.population.toLocaleString()}</p>

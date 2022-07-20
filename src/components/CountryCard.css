@@ -12,6 +12,10 @@ a {
 	margin-bottom: 3em;
 }
 
+.country-flag {
+	width: 100%;
+}
+
 .country-data,
 .country-name {
 	padding-left: 1em;
@@ -27,4 +31,12 @@ a {
 
 .text-bold {
 	font-weight: 600;
+}
+
+@media (min-width: 1200px) {
+	.country {
+		/* width: none; */
+		/* width: 600px; */
+		width: 100%;
+	}
 }

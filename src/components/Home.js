@@ -40,7 +40,7 @@ const Home = (props) => {
 										onChange={handleChange}		
 						/>
 				</div>
-				<div>
+				<div className="search-region-input">
 					<select onChange={handleChange}
 									value={inputs.region}
 									name="region"
@@ -54,8 +54,9 @@ const Home = (props) => {
 					</select>
 				</div>
 			</div>
-			
-			<CountryCard setCountry={props.setCountry} countries={props.countries} inputs={inputs} />
+			<div className="countries">
+				<CountryCard setCountry={props.setCountry} countries={props.countries} inputs={inputs} />
+			</div>
 		</main>
 	)
 }

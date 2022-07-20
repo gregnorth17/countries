@@ -1,8 +1,5 @@
 .home {
 	background: var(--background);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 .input,
@@ -40,10 +37,53 @@
 	padding-left: 2em;
 }
 
+
+
 .search-region {
 	margin-bottom: 2em;
 	width: 50%;
 	border: none;
+}
+
+.countries {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 1200px) {
+
+	.inputs {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 10.5em;
+	}
+
+	.search-region {
+		width: 100%;
+		margin: 0;
+	}
+
+	.search-country-input {
+		width: 35%;
+	}
+
+	
+
+	.countries {
+		/* display: grid;
+		grid-template-columns: repeat(4, auto);
+		justify-content: center;
+		align-items: start;
+		gap: 6em; */
+		flex-flow: row wrap;
+		justify-content: center;
+		gap: 2em;
+		align-items: start;
+		
+	}
 
 }
+
 
