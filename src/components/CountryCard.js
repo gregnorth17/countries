@@ -30,7 +30,7 @@ const CountryCard = (props) => {
 				<div key={index} className="country box-shadow">
 					<Link to={`/country/${country.cca3}`}>
 							<div>
-								<img className="country-flag" src={country.flags.png} alt="" />
+								<img className="country-card-flag" src={country.flags.png} alt="" />
 							</div>
 							<h3 className="country-name ">{country.name.common}</h3>
 					</Link>

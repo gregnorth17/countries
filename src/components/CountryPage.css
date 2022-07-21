@@ -38,3 +38,29 @@
 	width: 100%;
 }
 
+@media (min-width: 1200px) {
+	.country-page-container {
+		display: flex;
+		gap: 5em;
+		/* align-items: center; */
+	}
+
+	.btn {
+		display: inline-block;
+	}
+
+	.country-flag {
+		width: 50%;
+	}
+
+	.country-stats-flex {
+		display: flex;
+		gap: 3em;
+	}
+
+	.border-countires {
+		width: 30%;
+	}
+
+}
+

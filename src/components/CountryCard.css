@@ -9,10 +9,11 @@ a {
 .country {
 	background: var(--elements);
 	width: 70%;
+	/* width: 200px; */
 	margin-bottom: 3em;
 }
 
-.country-flag {
+.country-car-flag {
 	width: 100%;
 }
 
@@ -37,6 +38,8 @@ a {
 	.country {
 		/* width: none; */
 		/* width: 600px; */
+		/* width: 100%; */
+		/* max-width: 100%; */
 		width: 100%;
 	}
 }

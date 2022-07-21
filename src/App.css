@@ -51,9 +51,4 @@ a {
 	body {
 		max-width: none;
 	}
-
-	.country {
-		max-width: 200px;
-	}
-
 }

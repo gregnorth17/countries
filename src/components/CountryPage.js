@@ -40,33 +40,40 @@ const CountryPage = (props) => {
 			return (
 				<div className="country-page">
 					<Link to={"/"}><button className="btn box-shadow">←  Back</button></Link>
-					{/* <div className="country-flag">  */}
+					
+					<div className="country-page-container">
 						<img className="country-flag" src={country.flags.png} alt="flag"/>
-					{/* </div> */}
-					<div className="">
-						<h2 className="country-page-name ">{country.name.common}</h2>
-						<div className="margin-bottom">
-							<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{nativeNameString}</p>
-							<p className="country-stats"><span className="country-stats-bold">Population: </span>{country.population.toLocaleString()}</p>
-							<p className="country-stats"><span className="country-stats-bold">Region: </span>{country.region}</p>
-							<p className="country-stats"><span className="country-stats-bold">Sub Region: </span>{country.subregion}</p>
-							<p className="country-stats"><span className="country-stats-bold">Capital: </span>{country.capital}</p>
-						</div>
-						<div className="margin-bottom">
-							<p className="country-stats"><span className="country-stats-bold">Top Level Domain: </span>{country.tld}</p>
-							<p className="country-stats"><span className="country-stats-bold">Currencies: </span>{currenyString}</p>
-							<p className="country-stats"><span className="country-stats-bold">Languages: </span>{languageString}</p>
-						</div>
-						<div>
-							{borders && 
-							<div   className="borders">
-								<p className="country-stats border-countires">Border Countries:</p>
-								<Borders countries={props.countries} borders={borders} 
-								/>
+					
+						<div className="">
+							<h2 className="country-page-name ">{country.name.common}</h2>
+							<div className="country-stats-flex">
+								<div className="margin-bottom">
+									<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{nativeNameString}</p>
+									<p className="country-stats"><span className="country-stats-bold">Population: </span>{country.population.toLocaleString()}</p>
+									<p className="country-stats"><span className="country-stats-bold">Region: </span>{country.region}</p>
+									<p className="country-stats"><span className="country-stats-bold">Sub Region: </span>{country.subregion}</p>
+									<p className="country-stats"><span className="country-stats-bold">Capital: </span>{country.capital}</p>
+								</div>
+								<div>
+									<div className="margin-bottom">
+										<p className="country-stats"><span className="country-stats-bold">Top Level Domain: </span>{country.tld}</p>
+										<p className="country-stats"><span className="country-stats-bold">Currencies: </span>{currenyString}</p>
+										<p className="country-stats"><span className="country-stats-bold">Languages: </span>{languageString}</p>
+									</div>
+								</div>
 							</div>
-							}
+							<div>
+								{borders && 
+								<div   className="borders">
+									<p className="country-stats border-countires">Border Countries:</p>
+									<Borders countries={props.countries} borders={borders} 
+									/>
+								</div>
+								}
 
-						</div>		
+							</div>		
+						</div>
+
 					</div>
 				</div>
 			)
