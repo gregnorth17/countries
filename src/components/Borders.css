@@ -1,7 +1,8 @@
 .border {
-	padding: 0.5em 1em 0.5em 0;
+	padding: .7em 1em;
 	background: var(--elements);
-	border: none;
-	display: block;
+	border: .5px solid var(--text);
+	/* display: block; */
 	margin: 1em .5em;
 }
+

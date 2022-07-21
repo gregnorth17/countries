@@ -29,8 +29,8 @@ const CountryCard = (props) => {
 		return (
 				<div key={index} className="country box-shadow">
 					<Link to={`/country/${country.cca3}`}>
-							<div>
-								<img className="country-card-flag" src={country.flags.png} alt="" />
+							<div className="country-card-container">
+								<img className="country-card-flag"  src={country.flags.png} alt="flag" />
 							</div>
 							<h3 className="country-name ">{country.name.common}</h3>
 					</Link>

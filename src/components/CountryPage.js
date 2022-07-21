@@ -42,10 +42,12 @@ const CountryPage = (props) => {
 					<Link to={"/"}><button className="btn box-shadow">←  Back</button></Link>
 					
 					<div className="country-page-container">
-						<img className="country-flag" src={country.flags.png} alt="flag"/>
+					<div className="country-flag">
+						<img  src={country.flags.png} alt="flag"/>
+					</div>
 					
 						<div className="">
-							<h2 className="country-page-name ">{country.name.common}</h2>
+							<h2 className="country-page-name">{country.name.common}</h2>
 							<div className="country-stats-flex">
 								<div className="margin-bottom">
 									<p className="country-stats"><span className="country-stats-bold">Native Name: </span>{nativeNameString}</p>
@@ -65,7 +67,9 @@ const CountryPage = (props) => {
 							<div>
 								{borders && 
 								<div   className="borders">
-									<p className="country-stats border-countires">Border Countries:</p>
+									<div className="border-title">
+										<p className="country-stats border-countires">Border Countries:</p>
+									</div>
 									<Borders countries={props.countries} borders={borders} 
 									/>
 								</div>

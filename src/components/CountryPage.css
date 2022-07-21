@@ -32,6 +32,7 @@
 .borders {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 .border-countires {
@@ -39,10 +40,12 @@
 }
 
 @media (min-width: 1200px) {
+	.country-page {
+		font-size: 1.1rem;
+	}
 	.country-page-container {
 		display: flex;
 		gap: 5em;
-		/* align-items: center; */
 	}
 
 	.btn {
@@ -53,13 +56,22 @@
 		width: 50%;
 	}
 
+	.country-page-name {
+		margin: 1.5em 0;
+	}
+
+	.country-stats {
+		margin-bottom: 1em;
+	}
+
 	.country-stats-flex {
 		display: flex;
-		gap: 3em;
+		gap: 5em;
 	}
 
 	.border-countires {
-		width: 30%;
+		margin-bottom: 0;
+		margin-right: .75em;
 	}
 
 }

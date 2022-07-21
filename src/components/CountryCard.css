@@ -9,12 +9,12 @@ a {
 .country {
 	background: var(--elements);
 	width: 70%;
-	/* width: 200px; */
 	margin-bottom: 3em;
 }
 
 .country-car-flag {
 	width: 100%;
+	
 }
 
 .country-data,
@@ -41,5 +41,10 @@ a {
 		/* width: 100%; */
 		/* max-width: 100%; */
 		width: 100%;
+	}
+
+	.country-card-flag {
+		height: 100%;
+		/* object-fit: contain; */
 	}
 }
