@@ -8,7 +8,7 @@ const CountryPage = (props) => {
 	const [borders, setBorders] = useState([]);
 	const {countryName} = useParams();
 
-	useEffect( () => {
+	useEffect(() => {
 		const fetchCountry = async () => {
 			const response = await fetch(`https://restcountries.com/v3.1/alpha?codes=${countryName}`)
 			const data = await response.json();
