@@ -6,7 +6,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import "./Home.css";
 
 const Home = (props) => {
-	
+	console.log(props)
 	const [inputs, setInputs] = useState({
 		country: "",
 		region: ""

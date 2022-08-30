@@ -39,7 +39,7 @@ const CountryPage = (props) => {
 
 			return (
 				<div className="country-page">
-					<Link to={"/"}><button className="btn box-shadow">←  Back</button></Link>
+					<Link to={"/countries"}><button className="btn box-shadow">←  Back</button></Link>
 					
 					<div className="country-page-container">
 					<div className="country-flag">

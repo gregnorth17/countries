@@ -11,6 +11,8 @@ function App() {
 	const [countries, setCountries] = useState([]);
 	const [darkMode, setDarkMode] = useState(false);
 
+	
+
 	useEffect(() => {
 		fetch("https://restcountries.com/v3.1/all")
 			.then(response => response.json())
@@ -20,10 +22,10 @@ function App() {
     <div className="App">
 			<Navbar />
 			<Routes>
-      	<Route exact path="/" element={<Home countries={countries}
+      	<Route exact path="/countries" element={<Home countries={countries}
 																						//  setCountry={setCountry}
-				/>}></Route>
-				<Route path="/country/:countryName" element={<CountryPage countries={countries} />}></Route>
+				/>} />
+				<Route path="/country/:countryName" element={<CountryPage countries={countries} />} />
 				{/* <Route path="/country/:countryName" element></Route> */}
 			</Routes>
     </div>
