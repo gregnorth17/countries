@@ -4,12 +4,12 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import './App.css';
 import CountryPage from "./components/CountryPage";
-import useLocalStorage from "use-local-storage";
+// import useLocalStorage from "use-local-storage";
 
 
 function App() {
 	const [countries, setCountries] = useState([]);
-	const [darkMode, setDarkMode] = useState(false);
+	// const [darkMode, setDarkMode] = useState(false);
 
 	
 

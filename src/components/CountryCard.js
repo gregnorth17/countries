@@ -1,10 +1,11 @@
-import {useState} from "react";
+// import {useState} from "react";
 import {Link} from "react-router-dom";
 import "./CountryCard.css";
 
 const CountryCard = (props) => {
 	console.log(props);
 	
+	// eslint-disable-next-line array-callback-return
 	return props.countries.filter(countryName => {
 		if(props.inputs.country === "") {
 			return countryName;
@@ -15,6 +16,7 @@ const CountryCard = (props) => {
 								return countryName;
 							}
 	})
+	// eslint-disable-next-line array-callback-return
 	.filter(countryRegion => {
 		if(props.inputs.region === "") {
 			return countryRegion;
