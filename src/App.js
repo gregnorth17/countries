@@ -22,7 +22,7 @@ function App() {
     <div className="App">
 			<Navbar />
 			<Routes>
-      	<Route exact path="/countries" element={<Home countries={countries}
+      	<Route exact path="/" element={<Home countries={countries}
 																						//  setCountry={setCountry}
 				/>} />
 				<Route path="/country/:countryName" element={<CountryPage countries={countries} />} />
