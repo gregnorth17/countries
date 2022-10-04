@@ -1,6 +1,5 @@
 import {useState } from "react";
 import CountryCard from "./CountryCard";
-// import CountryPage from "./CountryPage";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import "./Home.css";

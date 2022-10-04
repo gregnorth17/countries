@@ -4,12 +4,10 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import './App.css';
 import CountryPage from "./components/CountryPage";
-// import useLocalStorage from "use-local-storage";
 
 
 function App() {
 	const [countries, setCountries] = useState([]);
-	// const [darkMode, setDarkMode] = useState(false);
 
 	
 
@@ -22,11 +20,8 @@ function App() {
     <div className="App">
 			<Navbar />
 			<Routes>
-      	<Route index path="/" element={<Home countries={countries}
-																						//  setCountry={setCountry}
-				/>} />
+      	<Route index path="/" element={<Home countries={countries}/>} />
 				<Route path="/country/:countryName" element={<CountryPage countries={countries} />} />
-				{/* <Route path="/country/:countryName" element></Route> */}
 			</Routes>
     </div>
   );

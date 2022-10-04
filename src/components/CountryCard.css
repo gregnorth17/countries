@@ -36,15 +36,10 @@ a {
 
 @media (min-width: 1200px) {
 	.country {
-		/* width: none; */
-		/* width: 600px; */
-		/* width: 100%; */
-		/* max-width: 100%; */
 		width: 100%;
 	}
 
 	.country-card-flag {
 		height: 100%;
-		/* object-fit: contain; */
 	}
 }
