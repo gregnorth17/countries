@@ -9,16 +9,16 @@ const CountryPage = (props) => {
 	const [borders, setBorders] = useState([]);
 	const {countryName} = useParams();
 
-	const fetchData = async () => {
-		const results = await axios.get(`/.netlify/functions/getCountry?codes=${countryName}`);
-		setCountry(results.data)
-		setBorders(results.data[0].borders);
-		console.log(results);
-	}
 
+	
 	useEffect(() => {
+		const fetchData = async () => {
+			const results = await axios.get(`/.netlify/functions/getCountry?codes=${countryName}`);
+			setCountry(results.data)
+			setBorders(results.data[0].borders);
+		}
 		fetchData();
-	},[])
+	},[countryName])
 
 	try {
 		return country.map(country => {
