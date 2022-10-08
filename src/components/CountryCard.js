@@ -2,7 +2,6 @@ import {Link} from "react-router-dom";
 import "./CountryCard.css";
 
 const CountryCard = (props) => {
-	console.log(props);
 	
 	// eslint-disable-next-line array-callback-return
 	return props.countries.filter(countryName => {

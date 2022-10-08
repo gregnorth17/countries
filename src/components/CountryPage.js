@@ -2,24 +2,23 @@ import {useEffect, useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import Borders from "./Borders";
 import "./CountryPage.css";
+import axios from "axios";
 
 const CountryPage = (props) => {
 	const [country, setCountry] = useState([]);
 	const [borders, setBorders] = useState([]);
 	const {countryName} = useParams();
 
+	const fetchData = async () => {
+		const results = await axios.get(`/.netlify/functions/getCountry?codes=${countryName}`);
+		setCountry(results.data)
+		setBorders(results.data[0].borders);
+		console.log(results);
+	}
+
 	useEffect(() => {
-		const fetchCountry = async () => {
-			const response = await fetch(`https://restcountries.com/v3.1/alpha?codes=${countryName}`)
-			const data = await response.json();
-			setCountry(data);
-			setBorders(data[0].borders && data[0].borders);
-		}
-
-		fetchCountry()
-		.catch(console.error)
-	},[countryName])
-
+		fetchData();
+	},[])
 
 	try {
 		return country.map(country => {
@@ -70,8 +69,7 @@ const CountryPage = (props) => {
 									<div className="border-title">
 										<p className="country-stats border-countires">Border Countries:</p>
 									</div>
-									<Borders countries={props.countries} borders={borders} 
-									/>
+									<Borders countries={props.countries} borders={borders} />
 								</div>
 								}
 

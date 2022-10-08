@@ -4,18 +4,20 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import './App.css';
 import CountryPage from "./components/CountryPage";
-
+import axios from "axios";
 
 function App() {
 	const [countries, setCountries] = useState([]);
 
-	
+	const fetchData = async () => {
+		const results = await axios.get("/.netlify/functions/getCountries");
+		setCountries(results.data);
+	}
 
 	useEffect(() => {
-		fetch("https://restcountries.com/v3.1/all")
-			.then(response => response.json())
-			.then(data => setCountries(data))
-	}, [])
+		fetchData();
+	},[])
+
   return (
     <div className="App">
 			<Navbar />
