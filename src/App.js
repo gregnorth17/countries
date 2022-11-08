@@ -1,10 +1,10 @@
-import {useEffect, useState} from "react";
-import {Routes, Route} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import './App.css';
 import CountryPage from "./components/CountryPage";
-import axios from "axios";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
 
 function App() {
 	const [countries, setCountries] = useState([]);
